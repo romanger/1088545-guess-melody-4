@@ -4,9 +4,9 @@ import App from './app';
 
 it(`Should App component render correctly`, () => {
   const tree = renderer.create(
-    <App
-      errorCount={3}
-      gameTime={5}
-    />).toJSON();
+      <App
+        errorCount={3}
+        gameTime={5}
+      />).toJSON();
   expect(tree).toMatchSnapshot();
 });
