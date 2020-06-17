@@ -10,7 +10,7 @@ const App = (props) => {
   return <WelcomeScreen
     time={gameTime}
     errorCount={errorCount}
-    welcomeButtonHandler={welcomeButtonHandler}
+    onWelcomeButtonClick={welcomeButtonHandler}
   />;
 };
 

@@ -20,7 +20,7 @@ const WelcomeScreen = (props) => {
 WelcomeScreen.propTypes = {
   time: PropTypes.number.isRequired,
   errorCount: PropTypes.number.isRequired,
-  onWelcomeButtonClick: PropTypes.func,
+  onWelcomeButtonClick: PropTypes.func.isRequired,
 };
 
 export default WelcomeScreen;
