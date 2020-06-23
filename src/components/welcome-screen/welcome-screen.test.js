@@ -5,9 +5,9 @@ import WelcomeScreen from './welcome-screen';
 it(`Should WelcomeScreen component render correctly`, () => {
   const tree = renderer.create(
       <WelcomeScreen
-        time={5}
+        gameTime={5}
         errorCount={3}
-        onWelcomeButtonClick={() => {}}
+        onWelcomeButtonClick={() => { }}
       />).toJSON();
   expect(tree).toMatchSnapshot();
 });
