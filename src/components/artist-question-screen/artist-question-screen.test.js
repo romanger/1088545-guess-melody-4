@@ -1,9 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import ArtistQuestionScreen from './artist-question-screen';
+import ArtistQuestionScreen from './artist-question-screen.jsx';
 
-
-const AVATAR_URL = `https://api.adorable.io/avatars/128`;
 
 const question = {
   type: `artist`,
@@ -12,23 +10,29 @@ const question = {
     src: `https://upload.wikimedia.org/wikipedia/commons/4/4e/BWV_543-fugue.ogg`,
   },
   answers: [{
-    picture: `${AVATAR_URL}/20`,
+    picture: `https://api.adorable.io/avatars/128/0`,
     artist: `John Snow`,
   }, {
-    picture: `${AVATAR_URL}/30`,
+    picture: `https://api.adorable.io/avatars/128/1`,
     artist: `Jack Daniels`,
   }, {
-    picture: `${AVATAR_URL}/40`,
+    picture: `https://api.adorable.io/avatars/128/2`,
     artist: `Jim Beam`,
   }],
 };
 
-it(`Should ArtistQuestionScreen component render correctly`, () => {
+it(`ArtistQuestionScreen is rendered correctly`, () => {
   const tree = renderer.create(
       <ArtistQuestionScreen
-        onAnsware = {()=>{}}
-        question = {question}
-      />
+        question={question}
+        onAnswer={() => {}}
+        renderPlayer={() => {}}
+      />, {
+        createNodeMock: () => {
+          return {};
+        }
+      }
   ).toJSON();
+
   expect(tree).toMatchSnapshot();
 });

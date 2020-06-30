@@ -25,6 +25,7 @@ it(`Should GenreQuestionScreen component render correctly`, () => {
       (<GenreQuestionScreen
         onAnswer = {()=>{}}
         question = {question}
+        renderPlayer={() => {}}
       />), {
         createNodeMock: () => {
           return {};
